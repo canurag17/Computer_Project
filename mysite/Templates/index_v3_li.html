@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+  <head>
+    <title>Airplane Bookings</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i" rel="stylesheet">
+
+    <link rel="stylesheet" href="{% static "accounts/css/open-iconic-bootstrap.min.css" %}">
+    <link rel="stylesheet" href="{% static "accounts/css/animate.css" %}">
+    
+    <link rel="stylesheet" href="{% static "accounts/css/owl.carousel.min.css" %}">
+    <link rel="stylesheet" href="{% static "accounts/css/owl.theme.default.min.css" %}">
+    <link rel="stylesheet" href="{% static "accounts/css/magnific-popup.css" %}">
+
+    <link rel="stylesheet" href="{% static "accounts/css/aos.css" %}">
+
+    <link rel="stylesheet" href="{% static "accounts/css/ionicons.min.css" %}">
+
+    <link rel="stylesheet" href="{% static "accounts/css/bootstrap-datepicker.css" %}">
+    <link rel="stylesheet" href="{% static "accounts/css/jquery.timepicker.css" %}">
+
+    
+    <link rel="stylesheet" href="{% static "accounts/css/flaticon.css" %}">
+    <link rel="stylesheet" href="{% static "accounts/css/icomoon.css" %}">
+    <link rel="stylesheet" href="{% static "accounts/css/style.css" %}">
+  </head>
+  <body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+	    <div class="container">
+	      <a class="navbar-brand" >*name</a>
+	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+	        <span class="oi oi-menu"></span> Menu
+	      </button>
+
+	      <div class="collapse navbar-collapse" id="ftco-nav">
+	        <ul class="navbar-nav ml-auto">
+	          <li class="nav-item active"><a href="index_v3_li.html" class="nav-link">Home</a></li>
+            <li class="nav-item active"><a href="accounts/history" class="nav-link">History</a></li>
+	          <li class="nav-item"><a href="accounts/index_v3_lo" class="nav-link">Logout</a></li>
+	          
+	          <li class="nav-item"><a href="accounts/book" class="nav-link">Book Tickets</a></li>
+	          {% comment %} <li class="nav-item"><a href="accounts/signup" class="nav-link">Register</a></li> {% endcomment %}
+	          
+	        </ul>
+	      </div>
+	    </div>
+	  </nav>
+     {% comment %} END navstyle="background-image:url('{{ STATIC_URL }}/images/bg_1.jpg");"  {% endcomment %}
+
+    <section class="home-slider owl-carousel"  >
+      <div class="slider-item" style="background-image:url(https://images.unsplash.com/photo-1429901225961-21f6bdc95b4d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1494&q=80)" >
+      	<div class="overlay"></div>
+        <div class="container">
+          <div class="row no-gutters slider-text align-items-center justify-content-center">
+          <div class="col-md-12 ftco-animate text-center">
+          	<div class="text mb-5 pb-3">
+	            <h1 class="mb-3">Welcome To *name</h1>
+	            <h2>Book Tickets &amp; </h2>
+            </div>
+          </div>
+          </div>
+
+        </div>
+        </div>
+      </div>
+
+      <div class="slider-item" style="background-image:url(https://images.unsplash.com/photo-1485444135087-798f70aed07f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1518&q=80)"">
+      	<div class="overlay"></div>
+        <div class="container">
+          <div class="row no-gutters slider-text align-items-center justify-content-center">
+          <div class="col-md-12 ftco-animate text-center">
+          	<div class="text mb-5 pb-3">
+	            <h1 class="mb-3">Enjoy A Luxury Experience</h1>
+	            <h2>Join  Us</h2>
+            </div>
+          </div>
+        </div>
+        </div>
+      </div>
+    </section>
+
+     <section class="ftco-section testimony-section bg-light">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-8 ftco-animate">
+            <div class="row ftco-animate">
+              <div class="col-md-12">
+                <div class="carousel-testimony owl-carousel ftco-owl">
+                  <div class="item">
+                    <div class="testimony-wrap py-4 pb-5">
+                      <div class="user-img mb-4" style="background-image: url("{% static "accounts/images/person_1.jpg" %}");">
+                        <span class="quote d-flex align-items-center justify-content-center">
+                          <i class="icon-quote-left"></i>
+                        </span>
+                      </div>
+                       <div class="text text-center"> 
+                        <p class="mb-4">Most efficient booking system</p>
+                        <p class="name">Nathan Smith</p>
+                        <span class="position">Guests</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="item">
+                    <div class="testimony-wrap py-4 pb-5">
+                      <div class="user-img mb-4" style="background-image: url("{% static "accounts/images/person_2.jpg" %}");">
+                        <span class="quote d-flex align-items-center justify-content-center">
+                          <i class="icon-quote-left"></i>
+                        </span>
+                      </div>
+                      <div class="text text-center">
+                        <p class="mb-4">Ticket booking was never easier.</p>
+                        <p class="name">Sooraj </p>
+                        <span class="position">Guests</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="item">
+                    <div class="testimony-wrap py-4 pb-5">
+                      <div class="user-img mb-4" style="background-image: url("{% static "accounts/images/person_3.jpg" %}");">
+                        <span class="quote d-flex align-items-center justify-content-center">
+                          <i class="icon-quote-left"></i>
+                        </span>
+                      </div>
+                      <div class="text text-center">
+                        <p class="mb-4">Extremely user friendly.</p>
+                        <p class="name">Vikas</p>
+                        <span class="position">Guests</span>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  {% comment %} <div class="item"> 
+                    <div class="testimony-wrap py-4 pb-5">
+                      <div class="user-img mb-4" style="background-image: url("{% static "accounts/images/person_1.jpg" %}");">
+                        <span class="quote d-flex align-items-center justify-content-center">
+                          <i class="icon-quote-left"></i>
+                        </span>
+                      </div>
+                      <div class="text text-center">
+                        <p class="mb-4"></p>
+                        <p class="name"></p>
+                        <span class="position">Guests</span>
+                      </div>
+                    </div>{% endcomment %}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+ 
+
+    <section class="ftco-section ftco-counter img" id="section-counter" style="background-image: url("{% static "accounts/images/bg_1.jpg" %});">
+    	<div class="container">
+    		<div class="row justify-content-center">
+    			<div class="col-md-10">
+		    		<div class="row">
+		          <div class="col-md-3 d-flex justify-content-center counter-wrap ftco-animate">
+		            <div class="block-18 text-center">
+		              <div class="text">
+		                <strong class="number" data-number="122">0</strong>
+		                <span>Happy Guests</span>
+		              </div>
+		            </div>
+		          </div>
+		          <div class="col-md-3 d-flex justify-content-center counter-wrap ftco-animate">
+		            <div class="block-18 text-center">
+		              <div class="text">
+		                <strong class="number" data-number="30">0</strong>
+		                <span>Airplanes</span>
+		              </div>
+		            </div>
+		          </div>
+		          <div class="col-md-3 d-flex justify-content-center counter-wrap ftco-animate">
+		            <div class="block-18 text-center">
+		              <div class="text">
+		                <strong class="number" data-number="2">0</strong>
+		                <span>Staffs</span>
+		              </div>
+		            </div>
+		          </div>
+		          <div class="col-md-3 d-flex justify-content-center counter-wrap ftco-animate">
+		            <div class="block-18 text-center">
+		              <div class="text">
+		                <strong class="number" data-number="10">0</strong>
+		                <span>Destination</span>
+		              </div>
+		            </div>
+		          </div>
+		        </div>
+	        </div>
+        </div>
+    	</div>
+    </section>
+
+
+
+   
+
+    <footer class="ftco-footer ftco-bg-dark ftco-section">
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col-md">
+            <div class="ftco-footer-widget mb-4">
+              
+              <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
+                <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
+                <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
+                <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
+              </ul>
+            </div>
+          </div>
+          
+	                <li><span class="icon icon-map-marker"></span><span class="text">SKCH,Mallasandra,Bangalore,India</span></li>
+                  <br></br><br></br><br></br><br></br>
+	                <li><a href="#"><span class="icon icon-phone"></span><span class="text">Credits:</span></a></li>
+                  <br></br><br></br><br></br><br></br>
+	                <li><a href="#"><span class="icon icon-envelope"></span><span class="text">We got all our html templates from Colorlib.com</span></a></li>
+                  <li><a href="https://colorlib.com/wp/templates/"><span class="icon icon-envelope"></span><span class="text">Colorlib.com</span></a></li>
+	              </ul>
+	            </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12 text-center">
+
+         
+    
+  
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+  <script src="{% static "accounts/js/jquery.min.js" %}"></script>
+  <script src="{% static "accounts/js/jquery-migrate-3.0.1.min.js" %}"></script>
+  <script src="{% static "accounts/js/popper.min.js" %}"></script>
+  <script src="{% static "accounts/js/bootstrap.min.js" %}"></script>
+  <script src="{% static "accounts/js/jquery.easing.1.3.js" %}"></script>
+  <script src="{% static "accounts/js/jquery.waypoints.min.js" %}"></script>
+  <script src="{% static "accounts/js/jquery.stellar.min.js" %}"></script>
+  <script src="{% static "accounts/js/owl.carousel.min.js" %}"></script>
+  <script src="{% static "accounts/js/jquery.magnific-popup.min.js" %}"></script>
+  <script src="{% static "accounts/js/aos.js"  %}"></script>
+  <script src="{% static "accounts/js/jquery.animateNumber.min.js" %}"></script>
+  <script src="{% static "accounts/js/bootstrap-datepicker.js" %}"></script>
+  {% comment %} <script src="{% static "accounts/js/jquery.timepicker.min.js" %}"></script> {% endcomment %}
+  <script src="{% static "accounts/js/scrollax.min.js" %}"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+  <script src="{% static "accounts/js/google-map.js" %}"></script>
+  <script src="{% static "accounts/js/main.js" %}"></script>
+    
+  </body>
+</html>

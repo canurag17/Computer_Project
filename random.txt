@@ -1,0 +1,100 @@
+ c = {'c':fl}
+        if c=={}:
+            print('no flights found')
+        else:
+            return render(request,'confirmation.html',c)
+        
+    else:
+        
+        return render(request,'book.html')
+
+def see_logout(request):
+     return render(request,'index_v3_lo.html')
+    
+def confirmation(request):
+    if request.method=="POST":
+        departing=request.POST['departing']
+        returning=request.POST['returning']
+        
+        fl=Flights.objects.get(Departure_City=departing,Arrival_City=returning)
+        c = {'c':fl}
+        return render(request,'confirmation.html',c)
+
+
+
+
+
+
+
+
+{%if c%}
+					<table>
+						<thead>
+                        	<tr class="table100-head">
+								<th class="column1">Plane ID</th>
+								<th class="column2">From</th>
+								<th class="column3">To</th>
+								<th class="column4">Departure Time</th>
+								<th class="column5">Arrival Time</th>
+								<th class="column6">Price</th>
+                                <th class="column7">Confirm</th>
+							</tr>
+						</thead>
+						<tbody>
+						{% for i in c%}
+								<tr>
+									<td class="column1">{{i.Plane_ID}}</td>
+									<td class="column2">{{i.F}}</td>
+									<td class="column3">{{i.T}}</td>
+									<td class="column4">{{i.Departure_Time}}</td>
+									<td class="column5">{{i.Arrival_Time}}</td>
+									<td class="column6">{{i.Price}}</td>
+                                    <td class="column7" button type="button" value="Confirm" href='index_v3_lo.html'></td>
+
+								</tr>
+                        {% endfor%}
+                        </tbody>
+					</table>
+                        {%endif%}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+	<title>Confirmation</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->	
+	 <link rel="icon" type="image/png" href="{% static "accounts/images_2/icons/favicon.ico" %}"> 
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static "accounts/vendor/bootstrap/css/bootstrap.min.css" %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static "accounts/fonts_2/font-awesome-4.7.0/css/font-awesome.min.css" %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static "accounts/vendor/animate/animate.css" %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static "accounts/vendor/select2/select2.min.css" %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static "accounts/vendor/perfect-scrollbar/perfect-scrollbar.css" %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static "accounts/css_2/util.css" %}">
+	<link rel="stylesheet" type="text/css" href="{% static "accounts/css_2/main.css" %}">
+<!--===============================================================================================-->
+</head>
+<body>
+	{% csrf_token %}
+	<div class="limiter">
+		<div class="container-table100">
+			<div class="wrap-table100">
+				<div class="table100">
+                {%if c%}
+					<table>
+						<thead>
+                        	<tr class="table100-head">
+								<th class="column1">Plane ID</th>
+								<th class="column2">From</th>
+								<th class="column3">To</th>
+								<th class="column4">Departure Time</th>
+								<th class="column5">Arrival Time</th>
+								<th class="column6">Price</th>
+                                <th class="column7">Confirm</th>
+							</tr>
+						</thead>
+						<tbody>
+						{% for i in c%}
+								<tr>
+									<td class="column1">{{i.Plane_ID}}</td>
+									<td class="column2">{{i.F}}</td>
+									<td class="column3">{{i.T}}</td>
+									<td class="column4">{{i.Departure_Time}}</td>
+									<td class="column5">{{i.Arrival_Time}}</td>
+									<td class="column6">{{i.Price}}</td>
+                                    <td class="column7"><a href="../index_v3_li.html/">Pay</a></td>
+
+								</tr>
+                        {% endfor%}
+                        </tbody>
+					</table>
+                        {%endif%}
+
+				</div>
+			</div>
+		</div>
+	</div>
+../book2/
+
+	
+
+<!--===============================================================================================-->	
+	<script src="{% static "accounts/vendor/jquery/jquery-3.2.1.min.js" %}"></script>
+<!--===============================================================================================-->
+	<script src="{% static "accounts/vendor/bootstrap/js/popper.js" %}"></script>
+	<script src="{% static "accounts/vendor/bootstrap/js/bootstrap.min.js" %}"></script>
+<!--===============================================================================================-->
+	<script src="{% static "accounts/vendor/select2/select2.min.js" %}"></script>
+<!--===============================================================================================-->
+	<script src="{% static "accounts/js_2/main.js" %}"></script>
+
+</body>
+</html>
