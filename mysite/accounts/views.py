@@ -111,7 +111,38 @@ def history(request):
         c = {'c':fl}
         return render(request,'history.html',{'c':fl})  
 
+def cancel(request):
+    cursor=connection.cursor()
+    if request.method=="POST":
+        id = request.POST['id']
+        '''flying_from = request.POST['flying_from']
+        flying_to=request.POST['flying_to']
+        departing=request.POST['departing']
+        returning=request.POST['returning']
+        adults=request.POST['adults']
+        children=request.POST['children']
+        travel_class=request.POST['travel_class']
+        cursor.execute('select id from auth_user where last_login = (select max(last_login) from auth_user)')
+        user_id=(cursor.fetchall())[0][0]'''
+        cursor.execute('delete from accounts_book where id="{}" '.format(id))
+        '''print(user_id)
+        lst = book()
+        lst.flying_from=flying_from
+        lst.flying_to=flying_to
+        lst.departing=departing
+        lst.returning=returning
+        lst.adults=adults
+        lst.children=children
+        lst.travel_class=travel_class
+        lst.user_id=user_id
+        cursor=connection.cursor()
+        fl=Flights.objects.filter(Departure_City=flying_from,Arrival_City=flying_to)
+        if len(fl)!=0:
+            lst.save()'''
+        return render(request,'index_v3_li.html')
 
+    else:
+        return render(request,'cancel.html')
     
     
         
